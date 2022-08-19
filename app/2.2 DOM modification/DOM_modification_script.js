@@ -2,28 +2,14 @@
 
 console.log("~~~~~~~~~~ 2.2 ~~~~~~~~~~\n ");
 
-console.log(
-  "\n1. Combien y a-t-il d'éléments <p> présents dans la page HTML ?"
-);
-console.dir(document.querySelectorAll("p").length);
+// console.dir(document.querySelectorAll("*"));
 
-console.log(
-  "\n2. Quel est le contenu texte de l'élément portant l'id coucou ?"
-);
-console.dir(document.querySelector("#coucou").textContent);
+console.log("\n1. Écris une fonction changeTitles()");
 
-console.log(
-  "\n3. Quelle est l'URL vers laquelle pointe le 3ème élément <a> de la page HTML ?"
-);
-console.dir(document.querySelectorAll("a")[2].attributes.href.value);
+const changeTitles = () => {
+  const allNodes = document.body.querySelectorAll("*");
+  console.dir(allNodes);
+  
+}
 
-console.log("\n4. Combien d'éléments portent la classe compte-moi ?");
-console.dir(document.querySelectorAll(".compte-moi").length);
-
-console.log(
-  '\n5. La page contient un seul élément <div>. Celui-ci contient 2 éléments "unordered list" ou <ul>. Dans le second <ul>, le premier élément de la liste (tag <li>) est caché visuellement de l\'utilisateur:'
-);
-console.dir(
-  document.querySelector("div").querySelectorAll("ul")[1].querySelector("li")
-    .textContent
-);
+changeTitles();
