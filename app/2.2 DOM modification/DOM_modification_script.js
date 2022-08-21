@@ -110,6 +110,18 @@ const changeViewButtons = (text, oldClass, newClass, element = "button") => {
       node.classList.add(newClass);
     }
   }
-}
+};
 
-changeViewButtons("View", "btn-outline-secondary", "btn-success")
+changeViewButtons("View", "btn-outline-secondary", "btn-success");
+
+console.log(document.body.querySelectorAll("main .album .container"));
+const element = document.body.querySelector("main .album .container .row");
+const parent = element.parentNode;
+
+const div = document.createElement("div");
+div.classList.add("row");
+
+parent.appendChild(div);
+
+const card = document.body.querySelectorAll(".card")[2];
+div.appendChild(card);
