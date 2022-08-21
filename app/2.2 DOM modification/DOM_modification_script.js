@@ -100,3 +100,16 @@ changeCardtext(
   3,
   "JavaScript est un langage de programmation de scripts principalement employé dans les pages web interactives mais aussi pour les serveurs. C'est un langage orienté objet à prototype."
 );
+
+const changeViewButtons = (text, oldClass, newClass, element = "button") => {
+  const allNodes = document.body.querySelectorAll(element);
+
+  for (const node of allNodes) {
+    if (node.textContent.startsWith(text)) {
+      node.classList.remove(oldClass);
+      node.classList.add(newClass);
+    }
+  }
+}
+
+changeViewButtons("View", "btn-outline-secondary", "btn-success")
